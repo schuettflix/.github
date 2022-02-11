@@ -1,0 +1,11 @@
+{
+  "name": "Schüttflix Microservice Workflow",
+  "description": "Schüttflix Microservice CI starter workflow.",
+  "iconName": "example-icon",
+  "categories": [
+      "Dockerfile"
+  ],
+  "filePatterns": [
+      "^Dockerfile"
+  ]
+}
