@@ -1,0 +1,28 @@
+name: Buildflix
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+env:
+  DOCKER_BUILDKIT: 1
+
+jobs:
+  building:
+    runs-on:
+      - 'self-hosted'
+      - 'amd64'
+
+    steps:
+      - name: 'Checkout'
+        uses: 'actions/checkout@v2'
+
+      - name: 'build'
+        run: |
+          make build
+
+      - name: 'push'
+        run: |
+          make push
